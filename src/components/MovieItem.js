@@ -1,16 +1,16 @@
 import React from "react";
 
 // Styling
-import styles from "../styles";
+import { MovieWrapper } from "./styles.js";
 
 const MovieItem = (props) => {
   const { movie } = props;
   return (
-    <div style={styles.movie} key={movie.id}>
-      <img style={styles.movieImage} alt={movie.Title} src={movie.Poster} />
-      <p style={styles.text}>{movie.Title}</p>
-      <p style={styles.text}>{movie.Year}</p>
-    </div>
+    <MovieWrapper key={movie.id}>
+      <img alt={movie.Title} src={movie.Poster} />
+      <p>{movie.Title}</p>
+      <p>{movie.Year}</p>
+    </MovieWrapper>
   );
 };
 

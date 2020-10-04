@@ -1,23 +1,29 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
-// Data
-import movies from "./movies.js";
 
 // Styling
-import styles from "./styles";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles.js";
 
 //Components
 import Header from "./components/Header.js";
 import MovieList from "./components/MovieList.js";
 
+//Theme
+const theme = {
+  primaryColor: "#1fb6ed",
+  secondaryColor: "white",
+  primaryBackground: "#282c34",
+};
+
 function App() {
   return (
-    <div className="App-header">
-      <Header />
-      <MovieList />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <GlobalStyle />
+        <Header />
+        <MovieList />
+      </div>
+    </ThemeProvider>
   );
 }
 

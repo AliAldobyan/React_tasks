@@ -4,15 +4,15 @@ import React from "react";
 import movies from "../movies.js";
 
 // Styling
-import styles from "../styles";
+import { List } from "./styles.js";
 // Components
 import MovieItem from "./MovieItem";
 
 const MovieList = () => {
-  let movieList = movies.map((movie) => (
+  const movieList = movies.map((movie) => (
     <MovieItem movie={movie} key={movie.id} />
   ));
-  return <div style={styles.list}>{movieList}</div>;
+  return <List>{movieList}</List>;
 };
 
 export default MovieList;

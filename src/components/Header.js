@@ -1,15 +1,13 @@
 import React from "react";
 
 // Styling
-import styles from "../styles";
+import { HeaderWrapper } from "./styles.js";
 
 const Header = () => {
   return (
-    <header>
+    <HeaderWrapper>
       <h2>Batman Movies</h2>
-      <br></br>
-      <br></br>
-    </header>
+    </HeaderWrapper>
   );
 };
 export default Header;

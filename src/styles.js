@@ -1,20 +1,11 @@
-const styles = {
-  movie: { margin: "20px" },
-  list: {
-    alignItems: "center",
-    justifyContent: "center",
-    display: "flex",
-  },
-  movieImage: {
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "70%",
-  },
-  text: {
-    textAlign: "center",
-    color: "#1fb6ed",
-  },
-};
+import styled, { createGlobalStyle } from "styled-components";
 
-export default styles;
+export const GlobalStyle = createGlobalStyle`
+  body{
+    background-color: ${(props) => props.theme.primaryBackground};
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+  }
+`;
